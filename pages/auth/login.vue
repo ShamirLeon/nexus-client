@@ -1,4 +1,10 @@
 <script setup>
+const { login } = useSanctumAuth()
+
+const credentials = ref({
+  email: '',
+  password: ''
+})
 
 </script>
 
@@ -36,7 +42,7 @@
             </div>
                 <form
                   className="flex flex-col gap-6"
-
+                  @submit.prevent="login(credentials)"
                 >
                   <div>
                     <label
@@ -46,6 +52,7 @@
                       Enter your email address
                     </label>
                     <input
+                      v-model="credentials.email"
                       id="username"
                       type="text"
                       placeholder="name@example.com"
@@ -60,6 +67,7 @@
                       Enter your password
                     </label>
                     <input
+                      v-model="credentials.password"
                       id="password"
                       type="password"
                       placeholder="Password"
@@ -67,6 +75,7 @@
                     />
                   </div>
                   <button
+                    @click="login(credentials)"
                     type="submit"
                     className="max-h-[58px] w-full rounded-lg bg-catalina-blue-950 p-4 text-lg font-semibold text-white transition duration-300 hover:bg-softBlue"
                   >
