@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-catalina-blue-50: #eaf5ff;
+    --color-catalina-blue-100: #d8ecff;
+    --color-catalina-blue-200: #b9daff;
+    --color-catalina-blue-300: #8ec0ff;
+    --color-catalina-blue-400: #6299ff;
+    --color-catalina-blue-500: #3e70ff;
+    --color-catalina-blue-600: #1c44ff;
+    --color-catalina-blue-700: #1236f0;
+    --color-catalina-blue-800: #1231c1;
+    --color-catalina-blue-900: #183197;
+    --color-catalina-blue-950: #132473;
+
+    --color-gunsmoke-50: #f6f6f6;
+    --color-gunsmoke-100: #e7e7e7;
+    --color-gunsmoke-200: #d1d1d1;
+    --color-gunsmoke-300: #b0b0b0;
+    --color-gunsmoke-400: #8a8a8a;
+    --color-gunsmoke-500: #6d6d6d;
+    --color-gunsmoke-600: #5d5d5d;
+    --color-gunsmoke-700: #4f4f4f;
+    --color-gunsmoke-800: #454545;
+    --color-gunsmoke-900: #3d3d3d;
+    --color-gunsmoke-950: #262626;
+    
+    --color-alice-blue-50: #ebf3fa;
+    --color-alice-blue-100: #e2edf7;
+    --color-alice-blue-200: #cce0f1;
+    --color-alice-blue-300: #a8cce8;
+    --color-alice-blue-400: #7fb1db;
+    --color-alice-blue-500: #6096d1;
+    --color-alice-blue-600: #4d7dc3;
+    --color-alice-blue-700: #426bb3;
+    --color-alice-blue-800: #3b5792;
+    --color-alice-blue-900: #344a74;
+    --color-alice-blue-950: #233048;
+    
+    --color-persian-blue-50: #f0f5fe;
+    --color-persian-blue-100: #dce7fd;
+    --color-persian-blue-200: #c1d6fc;
+    --color-persian-blue-300: #96bcfa;
+    --color-persian-blue-400: #6599f5;
+    --color-persian-blue-500: #4173f0;
+    --color-persian-blue-600: #2b54e5;
+    --color-persian-blue-700: #2443d9;
+    --color-persian-blue-800: #2336aa;
+    --color-persian-blue-900: #213387;
+    --color-persian-blue-950: #192152;    
+    
+}
+  
+@layer utilities {
+    .custom-dots {
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(
+          circle at 50% 50%,
+          #8a8a8a3b,
+          #8a8a8a3b 1px,
+          transparent 1px
+        ),
+        radial-gradient(circle at 0 0, #8a8a8a3b, #8a8a8a3b 1px, transparent 1px),
+        radial-gradient(
+          circle at 0 100%,
+          #8a8a8a3b,
+          #8a8a8a3b 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 100% 0,
+          #8a8a8a3b,
+          #8a8a8a3b 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 100% 100%,
+          #8a8a8a3b,
+          #8a8a8a3b 1px,
+          transparent 1px
+        );
+      color: #333;
+      background-size: 10px 10px;
+      background-blend-mode: multiply;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+}
+
+.blur-light {
+    background-image: url('../assets/ligth.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    z-index: 40;
+    filter: blur(200px);
+}
