@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
     <div className="flex h-screen w-screen">
       <div className="relative flex basis-[60%] flex-col items-center justify-center bg-gradient-to-b from-persian-blue-700 to-catalina-blue-950">
