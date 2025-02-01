@@ -2,6 +2,7 @@
 const { login } = useSanctumAuth();
 definePageMeta({
   layout: "auth",
+  middleware: ['sanctum:guest']
 });
 
 const credentials = ref({
@@ -13,7 +14,7 @@ const credentials = ref({
 <template>
   <div class="flex h-full flex-col justify-center">
     <div class="mb-16 text-center">
-      <h2 class="text-4xl font-bold text-catalina-blue-950">Log In</h2>
+      <h2 class="text-4xl font-bold text-catalina-blue-950">Register</h2>
       <p class="mt-2 text-[20px] text-black">
         Enter your valid credential for logging in
       </p>
@@ -51,9 +52,5 @@ const credentials = ref({
         Log In
       </button>
     </form>
-    <p class="mt-4 text-sm italic text-black">
-      Don&apos;t have an account?
-      <nuxt-link to="/auth/register" class="text-alice-blue-400">Sign up</nuxt-link>
-    </p>
   </div>
 </template>

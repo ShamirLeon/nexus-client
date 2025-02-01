@@ -2,7 +2,7 @@
   <header
     class="flex flex-col justify-between items-center px-8 py-4 bg-white shadow-md z-50 row-span-5"
   >
-    <div className="flex items-center gap-4 text-catalina-blue-950">
+    <div class="flex items-center gap-4 text-catalina-blue-950">
       <img
         src="/assets/images/nexus-logo.svg"
         alt="Nexus Logo"

@@ -39,14 +39,15 @@ export default defineNuxtConfig({
       header: 'X-XSRF-TOKEN',
     },
     redirect: {
-      onLogin: '/home',
-      onLogout: '/auth/login',
-      onAuthOnly: '/auth/login',
+      onLogin: "/", // Custom route after successful login
+      onLogout: "/auth/login", // Custom route after successful logout
+      onAuthOnly: "/auth/login", // Redirect to this page if user is not authenticated
+      onGuestOnly: "/", // Redirect to this page if user is authenticated
       keepRequestedRoute: true,
-    },
-    globalMiddleware: {
-      enabled: true,
-      allow404WithoutAuth: false,
     }
+    // globalMiddleware: {
+    //   enabled: true,
+    //   allow404WithoutAuth: false,
+    // }
   }
 })

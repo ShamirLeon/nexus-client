@@ -1,12 +1,15 @@
-<script setup>
+<script lang="ts" setup>
+import type { Contact } from '@/interfaces/contact.interface'
+import type { AxiosResponse } from 'axios'
 const { user } = useSanctumAuth()
 const { $axios } = useNuxtApp()
 
-const contacts = ref([])
+const contacts = ref<Contact[]>([])
 
 const getContacts = async () => {
-    const response = await $axios.get('/contact/index-by-user')
-    contacts.value = response.data
+    const { data }  = await $axios.get('/contact/index-by-user')
+    const contactsArray: Contact[] = data?.data
+    contacts.value = contactsArray.filter(contact => contact.status === 'pending')
 }
 
 onMounted(() => {
@@ -19,7 +22,7 @@ onMounted(() => {
         <div class="bg-red-400">
             <h1>Home</h1>
             <p>
-                {{ user }}
+                <!-- {{ user }} -->
             </p>
             <p>
                 {{ contacts }}
