@@ -1,5 +1,8 @@
 <script setup>
 const { login } = useSanctumAuth()
+definePageMeta({
+  layout: false
+})
 
 const credentials = ref({
   email: '',
@@ -9,7 +12,7 @@ const credentials = ref({
 </script>
 
 <template>
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen font-rubik">
       <div className="relative flex basis-[60%] flex-col items-center justify-center bg-gradient-to-b from-persian-blue-700 to-catalina-blue-950">
         <div className="custom-dots"></div>
         <div className="absolute z-10 h-full w-full bg-gradient-to-b from-transparent to-catalina-blue-950"></div>
@@ -56,7 +59,7 @@ const credentials = ref({
                       id="username"
                       type="text"
                       placeholder="name@example.com"
-                      className="mt-4 w-full rounded-lg border border-gray border-opacity-30 p-4 placeholder-gray placeholder-opacity-40 placeholder:text-lg focus:border-softBlue focus:outline-none "
+                      className="mt-4 w-full rounded-lg border border-gunsmoke-200 border-opacity-30 p-4 placeholder-gray placeholder-opacity-40 placeholder:text-lg focus:border-alice-blue-300 focus:outline-none bg-white"
                     />
                   </div>
                   <div>
@@ -71,20 +74,20 @@ const credentials = ref({
                       id="password"
                       type="password"
                       placeholder="Password"
-                      className="mt-4 w-full rounded-lg border border-gray border-opacity-30 p-4 placeholder-gray placeholder-opacity-40 placeholder:text-lg focus:border-softBlue focus:outline-none"
+                      className="mt-4 w-full rounded-lg border border-gunsmoke-200 border-opacity-30 p-4 placeholder-gray placeholder-opacity-40 placeholder:text-lg focus:border-alice-blue-300 focus:outline-none bg-white"
                     />
                   </div>
                   <button
                     @click="login(credentials)"
                     type="submit"
-                    className="max-h-[58px] w-full rounded-lg bg-catalina-blue-950 p-4 text-lg font-semibold text-white transition duration-300 hover:bg-softBlue"
+                    className="max-h-[58px] w-full rounded-lg bg-catalina-blue-950 p-4 text-lg font-semibold text-white transition duration-300 hover:bg-softBlue cursor-pointer"
                   >
                     Log In
                   </button>
                 </form>
                 <p className="mt-4 text-sm italic text-black">
                   Don’t have an account?
-                  <a href="/auth/register" className="text-softBlue">
+                  <a href="/auth/register" className="text-alice-blue-400">
                     Sign up
                   </a>
                 </p>

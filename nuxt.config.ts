@@ -14,10 +14,19 @@ export default defineNuxtConfig({
       apiUrl: process.env.API_URL || 'http://127.0.0.1:8000'
     }
   },
-  modules: ['nuxt-auth-sanctum'],
+  modules: ['nuxt-auth-sanctum', '@nuxtjs/google-fonts'],
+  googleFonts: {
+    families: {
+      Rubik: true,
+    },
+    display: 'swap',
+    preconnect: true,
+    download: true, 
+  },
   sanctum: {
     mode: 'cookie',
     redirectIfAuthenticated: true,
+    redirectIfUnauthenticated: true,
     baseUrl: 'http://localhost:8000/api',
     endpoints: {
       csrf: '/csrf-cookie',
@@ -32,6 +41,7 @@ export default defineNuxtConfig({
     redirect: {
       onLogin: '/home',
       onLogout: '/auth/login',
+      onAuthOnly: '/auth/login',
       keepRequestedRoute: true,
     }
   }

@@ -15,13 +15,15 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
-        <h1>Home</h1>
-        <p>
-            {{ user }}
-        </p>
-        <p>
-            {{ contacts }}
-        </p>
+    <div class="w-full h-full p-8">
+        <div class="bg-red-400">
+            <h1>Home</h1>
+            <p>
+                {{ user }}
+            </p>
+            <p>
+                {{ contacts }}
+            </p>
+        </div>
     </div>
 </template>

@@ -50,6 +50,8 @@
     --color-persian-blue-900: #213387;
     --color-persian-blue-950: #192152;    
     
+  /* Fonts */
+  --font-rubik: 'Rubik', sans-serif;
 }
   
 @layer utilities {
@@ -89,6 +91,7 @@
       z-index: 1;
     }
 }
+
 
 .blur-light {
     background-image: url('../assets/ligth.png');
