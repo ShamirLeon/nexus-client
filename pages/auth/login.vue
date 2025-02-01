@@ -1,7 +1,8 @@
-<script setup>
+<script lang="ts" setup>
 const { login } = useSanctumAuth()
 definePageMeta({
-  layout: false
+  layout: false,
+  auth: false
 })
 
 const credentials = ref({

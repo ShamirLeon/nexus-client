@@ -43,6 +43,10 @@ export default defineNuxtConfig({
       onLogout: '/auth/login',
       onAuthOnly: '/auth/login',
       keepRequestedRoute: true,
+    },
+    globalMiddleware: {
+      enabled: true,
+      allow404WithoutAuth: false,
     }
   }
 })

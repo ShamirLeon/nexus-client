@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import Header from "~/components/header.vue";
 import Sidebar from "~/components/sidebar.vue";
 </script>
@@ -10,7 +10,7 @@ import Sidebar from "~/components/sidebar.vue";
         <Header />
         <Sidebar />
         <div
-          class="col-span-8 row-span-5 col-start-4 col-end-13 bg-alice-blue-700"
+          class="col-span-8 row-span-5 col-start-5 col-end-13 bg-alice-blue-700"
         >
           <slot />
         </div>
